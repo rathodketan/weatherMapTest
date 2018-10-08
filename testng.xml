@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="WhetherMap">
+	<parameter name="browserType" value="chrome" />
+	<parameter name="appURL" value="https://openweathermap.org/" />
+	<!--TEST 1: Imp Info Test -->
+	<test name="ImpInfoTest">	
+			<classes>
+			<class name="map.WhetherMapTests.Setup" />
+			<class name="map.WhetherMapTests.ImpInfoTest" />			
+		</classes>
+	</test>
+	<!--TEST 2: E2E invalid City Test -->
+	<test name="InValidCityTest">	
+	<parameter name="city" value="invalid" />
+		<classes>
+			<class name="map.WhetherMapTests.Setup" />
+			<class name="map.WhetherMapTests.InvalidCityTest" />			
+		</classes>
+	</test>
+	<!--TEST 3:  E2E valid City Test -->
+	<test name="ValidCityTest">	
+	<parameter name="city" value="Mumbai" />
+		<classes>
+			<class name="map.WhetherMapTests.Setup" />
+			<class name="map.WhetherMapTests.ValidCityTest" />			
+		</classes>
+	</test>
+</suite>
